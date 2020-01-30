@@ -13,11 +13,11 @@ app.get('/:string', (req, res) => {
 const password = 'drip';
 
 app.get('/encode/:string', (req, res) => {
-    res.send(Vigenere.Cipher('password').crypt(req.params.string));
+    res.send(Vigenere.Cipher(password).crypt(req.params.string));
 });
 
 app.get('/decode/:string', (req, res) => {
-    res.send(Vigenere.Decipher('password').crypt(req.params.string));
+    res.send(Vigenere.Decipher(password).crypt(req.params.string));
 });
 
 
